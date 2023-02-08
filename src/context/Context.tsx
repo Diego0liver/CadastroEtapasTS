@@ -4,7 +4,7 @@ import { createContext, ReactNode, useContext, useReducer } from "react";
 type State ={
     etapa: Number;
     nome: String;
-    nivel: 0 | 1;
+    nivel: boolean;
     email: String;
     fone: String;
 }
@@ -23,7 +23,7 @@ type ChildrenProvider={
 const formInicio: State = {
     etapa: 0,
     nome: '',
-    nivel: 0,
+    nivel: true,
     email: '',
     fone: ''
 }

@@ -1,10 +1,14 @@
 
 import * as C from './styled'
 import Header from '../Header'
+import { ReactNode } from 'react'
 
 
+type Props={
+  children: ReactNode
+}
 
-const Theme = ({children}) => {
+const Theme = ({children}: Props) => {
   return (
     <C.Conteiner>
         <C.Area>
