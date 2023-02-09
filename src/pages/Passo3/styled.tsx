@@ -20,6 +20,8 @@ export const Conteiner = styled.div`
 
     label{
         font-size: 13px;
+        display: block;
+        margin-top: 25px
     }
     input{
             display: block;
@@ -46,6 +48,4 @@ export const Conteiner = styled.div`
         margin-top: 30px;
         margin: 5px;
     }
-  
- 
 `

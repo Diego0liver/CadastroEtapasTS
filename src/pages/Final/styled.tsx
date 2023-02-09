@@ -17,23 +17,6 @@ export const Conteiner = styled.div`
         background-color: #16195C;
         margin: 30px 0;
     }
-
-    label{
-        font-size: 13px;
-    }
-    input{
-            display: block;
-            margin-top: 7px;
-            box-sizing: border-box;
-            width: 100%;
-            padding: 20px 10px;
-            border: 2px solid #25CD89;
-            border-radius: 10px;
-            color: white;
-            outline: 0;
-            font-size: 15px;
-            background-color: #02044A;
-    }
     button{
         background-color: #25CD89;
         color: white;
@@ -46,6 +29,6 @@ export const Conteiner = styled.div`
         margin-top: 30px;
         margin: 5px;
     }
-  
- 
 `
+
+

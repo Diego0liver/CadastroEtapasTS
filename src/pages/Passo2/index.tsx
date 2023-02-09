@@ -11,30 +11,33 @@ export const Passo2=()=>{
     const {state, dispatch} = useForms()
 
     useEffect(()=>{
+        if(state.nome === ''){
+            hisoty('/')
+        }else{
         dispatch({
             type: FormAction.setEtapa,
             payload: 2
-        })
+        })}
     },[])
 
     const proximo=()=>{
-      if(state.nome !== '')
-        {hisoty('/passo3')}
-        else{
-            alert('Preencha o campo')
-        }
+        hisoty('/passo3')
     }
-    const setLevel =(nivel)=>{
+    const setLevel =(nivel: boolean)=>{
         dispatch({
             type: FormAction.setLevel,
             payload: nivel
         })
     }
 
+    const voltar=()=>{
+        hisoty('/')
+    }
+
     return(
         <Theme>
         <C.Conteiner>
-           <p>Passo {state.etapa}/3 </p>
+           <p>Passo <>{state.etapa}</>/3 </p>
            <h1>{state.nome} oque podemos ajudar?</h1>
            <p>Escolha oque voce esta procurando</p><hr />
            <Escolha
@@ -49,8 +52,9 @@ export const Passo2=()=>{
               selet={state.nivel === false}
               onClick={()=>setLevel(false)}
             />
-           
+           <button onClick={voltar} >Voltar</button>
            <button onClick={proximo} >Proximo</button>
+           
         </C.Conteiner>
         </Theme>
     )

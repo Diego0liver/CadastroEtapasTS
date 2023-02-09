@@ -44,5 +44,6 @@ export const Conteiner = styled.div`
         border-radius: 30px;
         cursor: pointer;
         margin-top: 30px;
+        
     }
 `

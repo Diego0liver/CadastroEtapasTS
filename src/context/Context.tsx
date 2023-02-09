@@ -1,5 +1,5 @@
 
-import { createContext, ReactNode, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer } from "react";
 
 type State ={
     etapa: Number;
@@ -17,11 +17,11 @@ type ConteType={
     dispatch: (action: Action)=>void
 }
 type ChildrenProvider={
-    children: ReactNode
+    children: any
 }
 
 const formInicio: State = {
-    etapa: 0,
+    etapa: 1,
     nome: '',
     nivel: true,
     email: '',

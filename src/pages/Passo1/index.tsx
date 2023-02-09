@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect } from 'react'
+import {ChangeEvent, useEffect } from 'react'
 import * as C from './styled'
 import Theme from '../../components/Theme'
 import {useForms, FormAction} from '../../context/Context'
@@ -23,7 +23,7 @@ export const Passo1=()=>{
             alert('Preencha o campo')
         }
     }
-    const nameChange=(e)=>{
+    const nameChange=(e: ChangeEvent<HTMLInputElement>)=>{
         dispatch({
             type: FormAction.setNome,
             payload: e.target.value
@@ -33,7 +33,7 @@ export const Passo1=()=>{
     return(
         <Theme>
         <C.Conteiner>
-           <p>Passo {state.etapa}/3</p>
+           <p>Passo <>{state.etapa}</>/3</p>
            <h1>Queremos te conhecer melhor</h1>
            <p>Preencha o seu nome abaixo</p><hr />
            <label>Seu nome: {state.nome}</label>

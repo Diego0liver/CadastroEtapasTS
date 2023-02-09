@@ -1,21 +1,44 @@
 
 import * as C from './styled'
 import Header from '../Header'
-import { ReactNode } from 'react'
+import { SideBar } from '../SideBar' 
+import { useForms } from '../../context/Context'
 
 
 type Props={
-  children: ReactNode
+  children: any
 }
 
 const Theme = ({children}: Props) => {
+  const {state} = useForms()
   return (
     <C.Conteiner>
         <C.Area>
             <Header />
             <C.Steps>
              <C.Sidebar>
-              ...
+              <SideBar
+              titulo='Nome'
+              icon='pro'
+              path='/'
+              act={state.etapa === 1}
+              />
+
+            <SideBar
+              titulo='Curso'
+              icon='book'
+              path='/passo2'
+              act={state.etapa === 2}
+              />
+
+            <SideBar
+              titulo='Contato'
+              icon='email'
+              path='/passo3'
+              act={state.etapa === 3}
+              />
+
+
              </C.Sidebar>
             
             <C.Page>
